@@ -1,0 +1,208 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* HERO SECTION */
+.hero {
+    background: url('https://images.unsplash.com/photo-1502877338535-766e1452684a') center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.6);
+    height: 100%;
+    padding: 20px 60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+    .nav-menu a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+        .nav-menu a:hover {
+            color: #00d4ff;
+        }
+
+.hero-content {
+    margin-top: 150px;
+    max-width: 500px;
+}
+
+    .hero-content h2 {
+        font-size: 42px;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        margin-bottom: 20px;
+    }
+
+.btn-primary {
+    background: linear-gradient(45deg, #00d4ff, #007cf0);
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+    .btn-primary:hover {
+        transform: scale(1.05);
+    }
+
+/* SECTIONS */
+section {
+    padding: 80px 60px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* GRID */
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.car-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+    .car-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .car-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+.car-info {
+    padding: 20px;
+}
+
+    .car-info button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        background: #007cf0;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .car-info button:hover {
+            background: #005bb5;
+        }
+
+/* BOOKING */
+.booking-card {
+    background: white;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: #28a745;
+    color: white;
+    border-radius: 15px;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =================== */
+/* RESPONSIVE */
+/* =================== */
+
+@media (max-width: 992px) {
+    .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h2 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+}
